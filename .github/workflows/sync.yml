@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # Change this to 20
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -17,4 +22,4 @@ jobs:
           git remote add gitlab https://gitlab.com/ranjanj3/deployment.git
           git push gitlab HEAD:main  # Adjust this to your target branch on GitLab
         env:
-          GITLAB_TOKEN: ${{secrets.glpat-GGB6ssKsZBeEo_AzUR3S}}
+          GITLAB_TOKEN: ${{ secrets.glpat-GGB6ssKsZBeEo_AzUR3S }}
