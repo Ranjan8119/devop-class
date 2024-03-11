@@ -2,7 +2,7 @@ name: Scheduled Sync to GitLab
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Set the schedule for midnight every day
+    - cron: '*/1 * * * *'  # Set the schedule for midnight every day
 
 jobs:
   sync:
