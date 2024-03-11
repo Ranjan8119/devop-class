@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: ranjan.singh8119@gmail.com
+        uses: actions/checkout@v2
 
       - name: Push to Target Repository
         run: |
