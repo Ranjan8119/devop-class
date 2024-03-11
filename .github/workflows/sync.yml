@@ -20,7 +20,8 @@ jobs:
       - name: Push to GitLab
         run: |
         
-         git remote add origin https://gitlab.com/ranjan.singh8119@gmail.com/deployment.git
+        git remote set-url origin https://ranjanj3:${glpat-GGB6ssKsZBeEo_AzUR3S}@gitlab.com/ranjanj3/deployment.git
+
           git push gitlab HEAD:main  # Adjust this to your target branch on GitLab
       
         env:
