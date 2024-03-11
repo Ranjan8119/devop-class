@@ -1,20 +1,20 @@
-name: Sync devops-class
+name: Scheduled Sync to GitLab
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # Set your desired cron schedule
+    - cron: '*/2 * * * *'  # Set the schedule for midnight every day
 
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Push to Target Repository
+      - name: Push to GitLab
         run: |
-          git remote add origin https://gitlab.com/ranjanj3/deployment.git
-         git push -uf origin main
+         git remote add origin https://gitlab.com/ranjanj3/deployment.git
+          git push gitlab HEAD:main  # Adjust this to your target branch on GitLab
         env:
-          GITHUB_TOKEN: ${{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}}
+          GITLAB_TOKEN: ${{ glpat-GGB6ssKsZBeEo_AzUR3S }}
