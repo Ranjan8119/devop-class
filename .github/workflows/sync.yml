@@ -20,15 +20,14 @@ jobs:
       - name: Push to GitLab
         run: |
         
-            cd existing_repo
+            
             git remote set-url origin https://gitlab.com/ranjanj3/deployment.git
 
             git remote add origin https://gitlab.com/ranjanj3/deployment.git
             git branch -M main
-            git push -uf origin main
+            git push gitlab main
 
 
-          git push gitlab HEAD:main  # Adjust this to your target branch on GitLab
       
         env:
           GITLAB_TOKEN: ${{ secrets.glpat-GGB6ssKsZBeEo_AzUR3S }}
