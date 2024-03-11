@@ -17,4 +17,4 @@ jobs:
           git remote add gitlab https://gitlab.com/ranjanj3/deployment.git
           git push gitlab HEAD:main  # Adjust this to your target branch on GitLab
         env:
-          GITLAB_TOKEN: ${{glpat-GGB6ssKsZBeEo_AzUR3S}}
+          GITLAB_TOKEN: ${{secrets.glpat-GGB6ssKsZBeEo_AzUR3S}}
